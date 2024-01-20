@@ -6,7 +6,7 @@ endpoints to send GET requests to get data from the show like:
 - Cast
 - Quotes
 
-There is also a PUT request for adding new quotes from other characters into the show. 
+There is also a POST request for adding new quotes from other characters into the show. 
 
 # Demo 
 - [Web App](https://atlantafx-api-5a3ad4f79ffc.herokuapp.com/)
