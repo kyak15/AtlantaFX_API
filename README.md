@@ -8,10 +8,10 @@ endpoints to send GET requests to get data from the show like:
 
 There is also a PUT request for adding new quotes from other characters into the show. 
 
-#Demo 
+# Demo 
 - [Web App](https://atlantafx-api-5a3ad4f79ffc.herokuapp.com/)
 - [API Documentation](https://atlantafx-api-5a3ad4f79ffc.herokuapp.com/docs)
 
-#Author
+# Author
 Karim Yakoub
 - Linkedin: www.linkedin.com/in/karim-yakoub
