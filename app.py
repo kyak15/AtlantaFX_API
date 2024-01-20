@@ -66,7 +66,7 @@ async def get_quotes():
 
 
 
-@app.put('/api/quotes/')
+@app.post('/api/quotes/')
 async def add_quote(character: str, quote_text: str):
     for item in quote_data:
         if quote_text == item['character']:
