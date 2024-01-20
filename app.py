@@ -68,19 +68,21 @@ async def get_quotes():
 
 @app.post('/api/quotes/')
 async def add_quote(character: str, quote_text: str):
+    new_quote = {"character": character, "quote": quote_text}
     for item in quote_data:
-        if quote_text == item['character']:
-            raise HTTPException(status_code=301, detail="Quote Already in API")
-    quote_data.append({character: quote_text})
+        if quote_text == item['quote']:
+            raise HTTPException(status_code=409, detail="Quote Already in API")
+    quote_data.append(new_quote)
 
-@app.get('/api/quotes/randomquote')
+@app.get('/api/quotes/randomquote/')
 async def get_random_quote():
     rand_int = random.randint(0, len(quote_data))
     print(quote_data[rand_int])
     return quote_data[rand_int]
 
-@app.delete('/api/quotes')
+@app.delete('/api/quotes/')
 async def delete_quote(character: str, quote_text: str):
     for item in quote_data:
         if quote_text == item['character']:
             quote_data.remove({character: quote_text})
+            return {"message": "Quote Deleted Successfully"}
