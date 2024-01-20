@@ -4,13 +4,10 @@ from fastapi import HTTPException
 from fastapi.templating import Jinja2Templates
 import json
 import random
-import os
 
 
 
-data_folder = os.path.join(os.path.dirname(__file__), 'data')
-json_file_path = os.path.join(data_folder, 'data.json')
-with open(json_file_path, "r") as file:
+with open('data.json', "r") as file:
     data = json.load(file)
 
 seasons_data = data["seasons"]
